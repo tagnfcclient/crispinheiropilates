@@ -3,175 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pilates - Cartão de Visita</title>
+  <title>Espaço Pilates</title>
   <style>
+    :root {
+      --verde-principal: #35991c;
+      --verde-claro: #e6fae1;
+      --verde-neon: #aed61e;
+      --branco: #ffffff;
+      --cinza-claro: #f9f9f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #e6fae1 0%, #ffffff 100%);
+      color: var(--verde-principal);
+      padding: 20px;
       text-align: center;
-      padding: 30px 15px;
-      color: white;
-      position: relative;
-      z-index: 1;
-      background-color: #e6fae1;
     }
 
-    img.logo {
-      max-width: 400px;
-      filter: drop-shadow(0px 0px 10px #35991c);
+    .container {
+      max-width: 600px;
+      margin: auto;
     }
 
-    h1, h3 {
-      color: #35991c;
+    .logo {
+      width: 100%;
+      max-width: 280px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 10px rgba(53, 153, 28, 0.6));
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 1.8em;
+      font-size: 2em;
+      color: var(--verde-principal);
     }
 
     h3 {
-      font-size: 1.4em;
+      font-weight: normal;
+      color: var(--verde-principal);
     }
 
     .btn {
       display: block;
-      margin: 15px auto;
-      padding: 16px 28px;
-      border: 2px solid #35991c;
-      border-radius: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      background-color: #e6fae1;
-      color: #35991c;
+      width: 90%;
+      max-width: 360px;
+      margin: 12px auto;
+      padding: 15px;
+      background-color: var(--verde-principal);
+      color: var(--branco);
       text-decoration: none;
-      width: 85%;
-      max-width: 340px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(53, 153, 28, 0.4);
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #e6fae1;
-      color: #35991c;
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 10px 10px rgba(53, 153, 28, 0.6);
-    }
-
-    .qr-container {
-      margin-top: 1px;
-    }
-
-    #pixNumero {
-      display: none;
-    }
-
-    #msgPix {
-      font-size: 1rem;
-      font-weight: bold;
-      color: #35991c;
-    }
-
-    .mapa {
-      margin-top: 25px;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(53, 153, 28, 0.5);
+      transform: translateY(-3px) scale(1.02);
+      background-color: #2b8018;
     }
 
     .beneficios {
-      margin: 25px auto;
-      padding: 5px;
-      max-width: 500px;
-      background-color: white;
-      box-shadow: 0 4px 10px rgba(53, 153, 28, 0.3);
-      color: #35991c;
+      background-color: var(--branco);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 30px auto;
+      box-shadow: 0 5px 20px rgba(53, 153, 28, 0.15);
       text-align: left;
     }
 
     .beneficios h2 {
       text-align: center;
-      color: #35991c;
       margin-bottom: 15px;
+      color: var(--verde-principal);
     }
 
     .beneficios ul {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
     }
 
     .beneficios ul li {
-      margin-bottom: 10px;
-      padding-left: 80px;
+      margin-bottom: 12px;
+      padding-left: 30px;
       position: relative;
+      line-height: 1.4;
     }
 
     .beneficios ul li::before {
       content: "✔";
-      color: #aed61e;
       position: absolute;
-      left: 1;
+      left: 0;
+      color: var(--verde-neon);
       font-weight: bold;
     }
 
+    .mapa {
+      margin-top: 25px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(53, 153, 28, 0.2);
+    }
+
+    .qr-container {
+      margin-top: 15px;
+    }
+
+    #msgPix {
+      font-size: 1rem;
+      margin-top: 10px;
+      font-weight: 600;
+    }
   </style>
 </head>
+
 <body>
+  <div class="container">
+    <img src="logo.png" alt="Logo Espaço Pilates" class="logo">
 
-  <div class="fundo-fixo"></div>
+    <h3><b>Equilíbrio, Corpo e Mente</b></h3>
 
-  <img src="logo.png" alt="Logo Vai de Doce" class="logo" />
-  
-  <h3><b>Equilíbrio, Corpo e Mente</b></h3>
-  
-  <a href="https://www.instagram.com/crispinheiroespaco?igsh=ZDNlZDc0MzIxNw==" class="btn" target="_blank">Instagram</a>
-  <a href="https://wa.me/5521997157955?text=Olá!%20Estou%20interessado%20em%20me%20matricular%20e%20gostaria%20de%20saber%20sobre%20os%20preços%20e%20horários." class="btn" target="_blank">WhatsApp</a>
-  <a href="#" class="btn" onclick="copiarPix()">Copiar chave PIX</a>
+    <a href="https://www.instagram.com/crispinheiroespaco?igsh=ZDNlZDc0MzIxNw==" class="btn" target="_blank">Instagram</a>
 
-  <div class="qr-container">
-    <p id="msgPix"></p>
-    <span id="pixNumero">24999161333</span>
+    <a href="https://wa.me/5521997157955?text=Olá!%20Estou%20interessado%20em%20me%20matricular%20e%20gostaria%20de%20saber%20sobre%20os%20preços%20e%20horários." class="btn" target="_blank">WhatsApp</a>
+
+    <a href="#" class="btn" onclick="copiarPix()">Copiar chave PIX</a>
+
+    <div class="qr-container">
+      <p id="msgPix"></p>
+      <span id="pixNumero" style="display:none;">24999161333</span>
+    </div>
+
+    <div class="beneficios">
+      <h2>Benefícios do Pilates</h2>
+      <ul>
+        <li>Melhora a postura e o alinhamento corporal</li>
+        <li>Fortalece a musculatura sem impacto</li>
+        <li>Melhora a flexibilidade e mobilidade</li>
+        <li>Alivia dores musculares e articulares</li>
+        <li>Reduz o estresse e promove bem-estar</li>
+        <li>Aumenta a consciência corporal</li>
+        <li>Previne lesões e melhora o equilíbrio</li>
+        <li>Auxilia na reabilitação física</li>
+      </ul>
+    </div>
+
+    <h3>Nossa Localização</h3>
+
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0349505918047!2d-41.99130742534251!3d-22.86529453767556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9768d38401d92f%3A0x314a9c76a2c5e44a!2sR.%20Eduardo%20Almeida%2C%20177%20-%20Santa%20Irene%2C%20Barra%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Casimiro%20de%20Abreu%20-%20RJ%2C%2028832-174!5e0!3m2!1spt-BR!2sbr!4v1718829650665!5m2!1spt-BR!2sbr"
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
-  
-  <div class="beneficios">
-    <h2>Benefícios do Pilates</h2>
-    <ul>
-      <li>✔ Melhora a postura e o alinhamento corporal</li>
-      <li>✔ Fortalece a musculatura sem impacto</li>
-      <li>✔ Melhora a flexibilidade e mobilidade</li>
-      <li>✔ Alivia dores musculares e articulares</li>
-      <li>✔ Reduz o estresse e promove bem-estar</li>
-      <li>✔ Aumenta a consciência corporal</li>
-      <li>✔ Previne lesões e melhora o equilíbrio</li>
-      <li>✔ Auxilia na reabilitação física</li>
-    </ul>
-  </div>
-  
-  <h3>Nossa Localização</h3>
-  
-  <div class="mapa">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0349505918047!2d-41.99130742534251!3d-22.86529453767556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9768d38401d92f%3A0x314a9c76a2c5e44a!2sR.%20Eduardo%20Almeida%2C%20177%20-%20Santa%20Irene%2C%20Barra%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Casimiro%20de%20Abreu%20-%20RJ%2C%2028832-174!5e0!3m2!1spt-BR!2sbr!4v1718829650665!5m2!1spt-BR!2sbr"
-      width="100%" 
-      height="300" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
 
   <script>
     function copiarPix() {
       const numeroPix = document.getElementById("pixNumero").innerText;
       navigator.clipboard.writeText(numeroPix).then(() => {
-        document.getElementById("msgPix").innerHTML = "Chave Pix copiada com sucesso!<br>Nome: Bárbara Machado Valim de Almeida<br>Banco: Caixa";
+        document.getElementById("msgPix").innerHTML = 
+          "✅ Chave Pix copiada com sucesso!<br><b>Nome:</b> Bárbara Machado Valim de Almeida<br><b>Banco:</b> Caixa";
       }).catch(err => {
-        document.getElementById("msgPix").innerHTML = "Erro ao copiar Pix";
+        document.getElementById("msgPix").innerHTML = "❌ Erro ao copiar Pix";
       });
     }
   </script>
-
 </body>
 </html>
